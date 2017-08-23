@@ -3,10 +3,10 @@
    "metaData": {
        "icon": "images/icon.png",
        "iconSmall": "images/iconSmall.png",
-       "category": "message",
+       "category": "flow",
 	   "isConfigured":true
    },
-   "type": "REST",
+   "type": "RESTDECISION",
    "lang": {
        "en-US": {
            "name": "{{ACTIVITY_NAME}}",
@@ -43,4 +43,27 @@
 		"height": "{{EDIT_HEIGHT}}",
 		"width": "{{EDIT_WIDTH}}"
 	}
+    "outcomes": [
+    {
+        "arguments": {
+            "branchResult": "offer_hotel",
+            "some argument": "passed from config.json for hotel"
+        }
+    },
+    {
+        "arguments": {
+            "branchResult": "offer_vacation",
+            "some argument": "passed from config.json for vacation"
+        }
+    },
+    {
+        "arguments": {
+            "branchResult": "offer_retail",
+            "some argument": "passed from config.json for retail"
+        },
+        "metaData": {
+            "label": "MyCustomLabel"
+        }
+    }
+]
 }
